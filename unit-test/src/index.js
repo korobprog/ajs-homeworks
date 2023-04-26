@@ -1,5 +1,16 @@
-import './css/style.css';
+const heroes = [
+  { name: 'мечник', health: 10 },
+  { name: 'маг', health: 100 },
+  { name: 'лучник', health: 80 },
+];
 
-import './js/app';
-
-// TODO: write your code in app.js
+heroes.sort((a, b) => {
+  if (a.health > b.health) {
+    return 1;
+  }
+  if (a.health < b.health) {
+    return -1;
+  }
+  // a должно быть равным b
+  return 0;
+});
